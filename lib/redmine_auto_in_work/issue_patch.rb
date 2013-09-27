@@ -16,8 +16,8 @@ module RedmineAutoInWork
 
   module InstanceMethods
     def update_status
-      st4 = IssueStatus.find(4)
-      st5 = IssueStatus.find(5)
+      st4 = IssueStatus.find(5)
+      st5 = IssueStatus.find(6)
       if self.status != st4 and self.status != st5
         # self.done_ratio = 100 if self.status.is_closed?
         if self.done_ratio > 0 and self.done_ratio < 100
