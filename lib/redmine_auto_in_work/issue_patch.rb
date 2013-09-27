@@ -20,6 +20,9 @@ module RedmineAutoInWork
       if self.done_ratio > 0 and self.done_ratio < 100
         self.status = IssueStatus.find(2)
       end
+      if self.done_ratio == 100
+        self.status = IssueStatus.find(3)
+      end
     end
   end
 end
